@@ -1,41 +1,49 @@
 import './App.css';
+import randomColor from 'randomcolor';
 import { useState } from 'react';
 
-// function App() {
-const RandomColor = () => {
-  const [color, setColor] = useState('#000');
+function ControlColor() {
+  const [color, setColor] = useState('');
+  const [luminosity, setLuminosity] = useState('');
+  const [hue, setHue] = useState('');
 
-  const getRgb = () => Math.floor(Math.random() * 256);
-
-  const rgbToHex = (r, g, b) =>
-    '#' +
-    [r, g, b]
-      .map((x) => {
-        const hex = x.toString(16);
-        return hex.length === 1 ? '0' + hex : hex;
-      })
-      .join('');
-
-  const handleGenerate = () => {
-    const color = {
-      r: getRgb(),
-      g: getRgb(),
-      b: getRgb(),
-    };
-    setColor(rgbToHex(color.r, color.g, color.b));
-  };
   return (
-    <div style={{ backgroundColor: color }} className="container">
-      <button style={{ color: color }} onClick={handleGenerate}>
-        {color}
-      </button>
+    <div style={{ backgroundColor: color }} className="ControlYourColor">
+      <div className="formInput">
+        <label className="formLabel">
+          <input
+            className="formInput"
+            placeholder="e.g. 'Red'"
+            value={hue}
+            onChange={(event) => setHue(event.currentTarget.value)}
+          />
+        </label>
+        <label className="formLabel">
+          <input
+            className="formInput"
+            placeholder="e.g. 'Dark'"
+            value={luminosity}
+            onChange={(event) => setLuminosity(event.currentTarget.value)}
+          />
+        </label>
+      </div>
+      <div className="controlButtonCenter">
+        <h3 className="textStyle">
+          Are you a controlling person?? Enter your options above (e.g. red,
+          light) Otherwise, just leave it alone and hit generate! :)
+        </h3>
+        <div className="choiceColor">Generated Color: {color}</div>
+        <button
+          style={{ color: color }}
+          className="controlButton"
+          onClick={() => {
+            setColor(randomColor({ luminosity: luminosity, hue: hue }));
+          }}
+        >
+          Generate
+        </button>
+      </div>
     </div>
-    // <div className="App">
-    //   <NewColorGenerator />
-    // </div>
   );
-};
-
-// }
-
-export default RandomColor;
+}
+export default ControlColor;
