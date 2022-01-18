@@ -83,3 +83,9 @@ button:hover {
   color: lavenderblush;
   padding-bottom: 50px;
 }
+
+.choiceColor {
+  transition: background-color 0.5s ease-in-out;
+  transform: 0.3s ease-in-out;
+  box-shadow: 0.3s ease-in-out;
+}
