@@ -32,7 +32,9 @@ function ControlColor() {
           Are you a controlling person?? Enter your options above (e.g. red,
           light) Otherwise, just leave it alone and hit generate! :)
         </h3>
-        <div className="choiceColor">Generated Color: {color}</div>
+        <div style={{ backgroundColor: color }} className="choiceColor">
+          Generated Color: {color}
+        </div>
         <button
           style={{ color: color }}
           className="controlButton"
