@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+#React Random Color Generator
+
+> You can pull up random colors by hitting the Generate button, or you can control which color comes up with the Hue and Luminosity.
+
+Just take you pick. If you want control of the color, you can select the color and the luminosity. Otherwise you can just hit generate and will will put out a random color with you.
+
+Either way, you will get the hex code to tell you the color.
+
+The good news is, if you don't like the color, just keep hitting generate until you do! It won't stop! :)
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +77,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `yarn build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
