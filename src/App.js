@@ -29,8 +29,8 @@ function ControlColor() {
       </div>
       <div className="controlButtonCenter">
         <h3 className="textStyle">
-          Are you a controlling person?? Enter your options above (e.g. red,
-          light) Otherwise, just leave it alone and hit generate! :)
+          Want control? Enter your options above (e.g. red, light) Otherwise,
+          just hit generate! :)
         </h3>
         <div style={{ backgroundColor: color }} className="choiceColor">
           Generated Color: {color}
